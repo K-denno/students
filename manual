@@ -1,0 +1,10 @@
+-> Struct students with the attributes name,midOfSem,endOfSem,assignment,project and total acts a blueprint for the objects we are going to create
+-> A list of type Students which is of datatype struct is created and mmade equal to numOfStudents which is 5 in our case
+-> The marks input are added together and saved as total.
+-> To add user pick option 1->it loops through the list 5 times while adding the details being input by the user whilst checking the contraints ie to make sure total marks do not exceed 100
+-> If marks exceed 100 it breaks the loop and goes back to the main menu
+-> Option 2 -> Loops through all users in the list whilst displaying their details.
+-> Option 3 -> Edits user details ie asks for the username of the student and proceeds to ask for new marks if the user exists while redirects to the main menu if the user does not exist.
+-> Option 4 -> Loops through while adding all totals in the studentsList then assigns grades according to the total course average
+-> lines 89-112 gets the average and checks agains themarks to assign appropriate grades.
+
