@@ -3,7 +3,7 @@
 using namespace std;
 
 struct students{
-    char name[15];  // Attribute
+    string name;  // Attribute
     int midOfSem;
     int assignment;
     int endOfSem;
@@ -13,9 +13,7 @@ struct students{
 
 int main()
 {
-    int numOfStudents,choice;
-    cout<<"Enter total number of students >> ";
-    cin>>numOfStudents;
+    int numOfStudents=5,choice;
     struct students studentsList[numOfStudents];
     while(true){
     cout<< "\nPick an option to execute below:"<<endl;
@@ -28,21 +26,34 @@ int main()
     cin>>choice;
 
     if(choice==1){
+        int mid,ass,endsem,proj;
+        string name;
         for(int i=0;i<numOfStudents;i++){
             cout<<"Enter user " + to_string(i+1) +" Details "<<endl;
             cout<<"Enter Student name >> ";
-            cin>>studentsList[i].name;
+            cin>>name;
             cout<<"Enter Mid of Sem marks >> ";
-            cin>>studentsList[i].midOfSem;
+            cin>>mid;
             cout<<"Enter Assignment marks >> ";
-            cin>>studentsList[i].assignment;
+            cin>>ass;
             cout<<"Enter End of Sem marks >> ";
-            cin>>studentsList[i].endOfSem;
+            cin>>endsem;
             cout<<"Enter Project marks >> ";
-            cin>>studentsList[i].project;
-            studentsList[i].total=studentsList[i].midOfSem+studentsList[i].assignment+studentsList[i].endOfSem+studentsList[i].project;
+            cin>>proj;
+            if((mid<=25)&&((ass+proj)<=45)&&(endsem<30)){
+                studentsList[i].name=name;
+                studentsList[i].midOfSem=mid;
+                studentsList[i].assignment=ass;
+                studentsList[i].endOfSem=endsem;
+                studentsList[i].project=proj;
+                studentsList[i].total=mid+ass+endsem+proj;
+                cout<<"ALL STUDENTS SUCCESSFULLY ADDED"<<endl;
+            }else{
+                cout<<"Marks should be below 25"<<endl;
+            }
+
         }
-        cout<<"ALL STUDENTS SUCCESSFULLY ADDED"<<endl;
+
     }else if(choice==2){
         cout<<"id \t\t name \t\t midsem \t assignment \t endsem \t project \t total"<<endl;
         for(int i=0;i<numOfStudents;i++){
