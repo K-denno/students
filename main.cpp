@@ -49,7 +49,11 @@ int main()
                 studentsList[i].total=mid+ass+endsem+proj;
                 cout<<"ALL STUDENTS SUCCESSFULLY ADDED"<<endl;
             }else{
-                cout<<"Marks should be below 25"<<endl;
+                cout<<"Mid sem Marks should be below 25"<<endl;
+                cout<<"End sem Marks should be below 25"<<endl;
+                cout<<"Assignment and project Marks should be below 45"<<endl;
+
+                break;
             }
 
         }
@@ -110,6 +114,7 @@ int main()
         }else{
             grade="F";
         }
+        cout<<total<<endl;
         cout<<"Average Performance was " + to_string((total/(numOfStudents)))<<endl;
         cout <<"Grade: "+ grade<<endl;
 
