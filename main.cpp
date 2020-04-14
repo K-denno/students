@@ -114,7 +114,6 @@ int main()
         }else{
             grade="F";
         }
-        cout<<total<<endl;
         cout<<"Average Performance was " + to_string((total/(numOfStudents)))<<endl;
         cout <<"Grade: "+ grade<<endl;
 
